@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fire Prediction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container text-center">
+        <h1>Forest Fire Prediction</h1>
+        <p>Predict the likelihood of a forest fire based on weather conditions.</p>
+        <form id="prediction-form">
+            <div class="form-group">
+                <input type="number" class="form-control" id="temperature" placeholder="Temperature (°C)">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="humidity" placeholder="Humidity (%)">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="wind-speed" placeholder="Wind Speed (km/h)">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" id="fuel-moisture" placeholder="Fuel Moisture (%)">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
